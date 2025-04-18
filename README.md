@@ -5,7 +5,6 @@ Fullstack Data Science & Engineering Bootcamp
 - [Introduction](#-introduction)
 - [Purpose of this Repository](#-purpose-of-this-repository)
 - [Learning Roadmap](#-learning-roadmap)
-- [Projects](#-projects)
 - [Contact](#-contact)
 
 
