@@ -34,7 +34,7 @@ I update it as I progress.
 | 📊 Exploratory Data Analysis | EDA, Numpy, Pandas, statistics, data visualization with Plotly, mini-projects | ⬜ In progress  |
 | 📁 Data Collection & Management | Web scraping, APIs, HTML/CSS, S3 storage, ETL pipelines, SQL, SQLAlchemy | ⬜ Upcoming |
 | 🧠 Big Data | Spark (RDD, DataFrames, SQL), PySpark, Databricks, data warehousing | ⬜ Upcoming |
-| 📘 Supervised Machine Learning | Regression, classification, preprocessing, cross-validation, pipelines | ⬜ In progress |
+| 📘 Supervised Machine Learning | Regression, classification, preprocessing, cross-validation, pipelines | ⬜ ipcoming |
 | 📙 Unsupervised Machine Learning | Clustering (KMeans, DBSCAN), PCA, NLP, topic modeling, mini-projects | ⬜ Upcoming |
 | 🧠 Deep Learning | TensorFlow/Keras, CNNs, image processing, visual classification | ⬜ Upcoming |
 | 🚀 Deployment | Docker, MLflow, FastAPI, API deployment, Streamlit dashboards | ⬜ Upcoming |
