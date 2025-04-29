@@ -30,8 +30,8 @@ I update it as I progress.
 | Module | Description | Status |
 |--------|-------------|--------|
 | 🐍 Python Programming | Core Python, loops, functions, OOP, best practices, Git & GitHub | ✅ Completed |
-| 📊 Exploratory Data Analysis | EDA, Numpy, Pandas, statistics, data visualization with Plotly, mini-projects | ⬜ In progress  |
-| 📁 Data Collection & Management | Web scraping, APIs, HTML/CSS, S3 storage, ETL pipelines, SQL, SQLAlchemy | ⬜ Upcoming |
+| 📊 Exploratory Data Analysis | EDA, Numpy, Pandas, statistics, data visualization with Plotly, mini-projects | ✅ Completed  |
+| 📁 Data Collection & Management | Web scraping, APIs, HTML/CSS, S3 storage, ETL pipelines, SQL, SQLAlchemy | ⬜ In progress |
 | 🧠 Big Data | Spark (RDD, DataFrames, SQL), PySpark, Databricks, data warehousing | ⬜ Upcoming |
 | 📘 Supervised Machine Learning | Regression, classification, preprocessing, cross-validation, pipelines | ⬜ Upcoming |
 | 📙 Unsupervised Machine Learning | Clustering (KMeans, DBSCAN), PCA, NLP, topic modeling, mini-projects | ⬜ Upcoming |
