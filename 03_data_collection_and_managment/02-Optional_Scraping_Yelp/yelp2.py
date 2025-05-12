@@ -4,9 +4,9 @@ import logging
 import scrapy
 from scrapy.crawler import CrawlerProcess
 
-# 👉 L'utilisateur entre les infos AVANT le lancement du spider
-restaurant_type = input("Quel type de restaurant ? ").replace(" ", "+")
-location = input("Dans quelle ville ? ").replace(" ", "+")
+# need to be launch by the terminal, don't work in jupyter notebook
+restaurant_type = input("Quel type de restaurant ? ")
+location = input("Dans quelle ville ? ")
 
 class YelpSpider(scrapy.Spider):
     name = 'yelp'
