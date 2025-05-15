@@ -38,12 +38,7 @@ I update it as I progress.
 | 🧠 Deep Learning | TensorFlow/Keras, CNNs, image processing, visual classification | ⬜ Upcoming |
 | 🚀 Deployment | Docker, MLflow, FastAPI, API deployment, Streamlit dashboards | ⬜ Upcoming |
 | 🔡 Large Language Models | Core LLM concepts, embeddings, fine-tuning, AI app demos | ⬜ Upcoming |
-| 🧠 LangChain & VectorDB | LLM chaining (LangChain), agents, memory, VectorDB, RAG pipelines | ⬜ Upcoming |
-| 🧪 Fine-tuning & Advanced LLMs | Model fine-tuning, inference, recommendations, HuggingFace | ⬜ Upcoming |
-| 🌐 LLM in Production | Deployment of LLM apps: APIs, assistants, LangChain apps | ⬜ Upcoming |
-| 💼 Career Coaching | Portfolio, CV, project storytelling, professional GitHub, interview prep | ⬜ Upcoming |
 | 🎤 Final Project | Full data project: data collection, modeling, analysis, final presentation | ⬜ Upcoming |
-| 🏆 Certification | Final Data Scientist evaluation (practical exam & oral defense) | ⬜ Upcoming |
 
 
 ## 📫 Contact
