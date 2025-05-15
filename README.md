@@ -27,8 +27,8 @@ This repository is meant to:
 This table summarizes the key modules of my intensive bootcamp training.  
 I update it as I progress.
 
-| Module | Description | Status | Final Project |
-|--------|-------------|--------|---------------|
+| Module | Description | Final Project | Status |
+|--------|-------------|---------------|--------|
 | 🐍 Python Programming | Core Python, loops, functions, OOP, best practices, Git & GitHub | [uil a quizz](https://github.com/Quentin-qha/Jedha/tree/edb59fb939425a6a7df633ff4d6205c5fa51f4ab/01_python_programming/final_project) | ✅ |
 | 📊 Exploratory Data Analysis | EDA, Numpy, Pandas, statistics, data visualization with Plotly, mini-projects | [Speed Dating Data Analysis](https://github.com/Quentin-qha/Jedha/tree/edb59fb939425a6a7df633ff4d6205c5fa51f4ab/02_exploratory_data_analysis/final_project) | ✅ |
 | 📁 Data Collection & Management | Web scraping, APIs, HTML/CSS, S3 storage, ETL pipelines, SQL, SQLAlchemy | - | 🟡 |
