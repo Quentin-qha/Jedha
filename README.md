@@ -29,16 +29,16 @@ I update it as I progress.
 
 | Module | Description | Status | Final Project |
 |--------|-------------|--------|---------------|
-| 🐍 Python Programming | Core Python, loops, functions, OOP, best practices, Git & GitHub | ✅ Completed | [Buil a quizz](https://github.com/Quentin-qha/Jedha/tree/edb59fb939425a6a7df633ff4d6205c5fa51f4ab/01_python_programming/final_project) |
-| 📊 Exploratory Data Analysis | EDA, Numpy, Pandas, statistics, data visualization with Plotly, mini-projects | ✅ Completed  | [Speed Dating Data Analysis](https://github.com/Quentin-qha/Jedha/tree/edb59fb939425a6a7df633ff4d6205c5fa51f4ab/02_exploratory_data_analysis/final_project) |
-| 📁 Data Collection & Management | Web scraping, APIs, HTML/CSS, S3 storage, ETL pipelines, SQL, SQLAlchemy | 🟡 In progress | - |
-| 🧠 Big Data | Spark (RDD, DataFrames, SQL), PySpark, Databricks, data warehousing | ⬜ Upcoming | - |
-| 📘 Supervised Machine Learning | Regression, classification, preprocessing, cross-validation, pipelines | ⬜ Upcoming | - |
-| 📙 Unsupervised Machine Learning | Clustering (KMeans, DBSCAN), PCA, NLP, topic modeling, mini-projects | ⬜ Upcoming | - |
-| 🧠 Deep Learning | TensorFlow/Keras, CNNs, image processing, visual classification | ⬜ Upcoming | - |
-| 🚀 Deployment | Docker, MLflow, FastAPI, API deployment, Streamlit dashboards | ⬜ Upcoming | - |
-| 🔡 Large Language Models | Core LLM concepts, embeddings, fine-tuning, AI app demos | ⬜ Upcoming | - |
-| 🎤 Final Project | Full data project: data collection, modeling, analysis, final presentation | ⬜ Upcoming | - |
+| 🐍 Python Programming | Core Python, loops, functions, OOP, best practices, Git & GitHub | ✅  | [uil a quizz](https://github.com/Quentin-qha/Jedha/tree/edb59fb939425a6a7df633ff4d6205c5fa51f4ab/01_python_programming/final_project) |
+| 📊 Exploratory Data Analysis | EDA, Numpy, Pandas, statistics, data visualization with Plotly, mini-projects | ✅  | [Speed Dating Data Analysis](https://github.com/Quentin-qha/Jedha/tree/edb59fb939425a6a7df633ff4d6205c5fa51f4ab/02_exploratory_data_analysis/final_project) |
+| 📁 Data Collection & Management | Web scraping, APIs, HTML/CSS, S3 storage, ETL pipelines, SQL, SQLAlchemy | 🟡 | - |
+| 🧠 Big Data | Spark (RDD, DataFrames, SQL), PySpark, Databricks, data warehousing | ⬜ | - |
+| 📘 Supervised Machine Learning | Regression, classification, preprocessing, cross-validation, pipelines | ⬜ | - |
+| 📙 Unsupervised Machine Learning | Clustering (KMeans, DBSCAN), PCA, NLP, topic modeling, mini-projects | ⬜ | - |
+| 🧠 Deep Learning | TensorFlow/Keras, CNNs, image processing, visual classification | ⬜ | - |
+| 🚀 Deployment | Docker, MLflow, FastAPI, API deployment, Streamlit dashboards | ⬜ | - |
+| 🔡 Large Language Models | Core LLM concepts, embeddings, fine-tuning, AI app demos | ⬜ | - |
+| 🎤 Final Project | Full data project: data collection, modeling, analysis, final presentation | ⬜ | - |
 
 
 ## 📫 Contact
