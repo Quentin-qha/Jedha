@@ -8,8 +8,6 @@ city_to_url = {
     city: f"https://www.booking.com/searchresults.fr.html?ss={city.replace(' ', '+')}&lang=fr&ac_suggestion_list_length=20&search_selected=true&group_adults=2&group_children=0"
     for city in cities
 }
-
-#changer le .env pour le mettre à la racine de l'ordi
 class hotelSpider(scrapy.Spider):
     name = "hotel_spider"
 
