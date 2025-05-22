@@ -86,4 +86,4 @@ It aims to strengthen my skills in:
 
 ---
 
-> 📌 *Project completed by Quentin Haentjens* — Le 26 avril 2025 dans le cadre de ma formation chez Jedha
+> 📌 *Project completed by Quentin Haentjens* — on April 26, 2025, as part of my training at Jedha.
