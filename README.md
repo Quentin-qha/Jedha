@@ -31,8 +31,8 @@ I update it as I progress.
 |--------|-------------|---------------|--------|
 | 🐍 Python Programming | Core Python, loops, functions, OOP, best practices, Git & GitHub | [Buil a quizz](01_python_programming/final_project) | ✅ |
 | 📊 Exploratory Data Analysis | EDA, Numpy, Pandas, statistics, data visualization with Plotly, mini-projects | [Speed Dating Data Analysis](02_exploratory_data_analysis/final_project) | ✅ |
-| 📁 Data Collection & Management | Web scraping, APIs, HTML/CSS, S3 storage, ETL pipelines, SQL, SQLAlchemy | - | 🟡 |
-| 🧠 Big Data | Spark (RDD, DataFrames, SQL), PySpark, Databricks, data warehousing | - | ⬜ |
+| 📁 Data Collection & Management | Web scraping, APIs, HTML/CSS, S3 storage, ETL pipelines, SQL, SQLAlchemy | [Weather scrapping - Kayak](03_data_collection_and_managment/final_project) | ✅ |
+| 🧠 Big Data | Spark (RDD, DataFrames, SQL), PySpark, Databricks, data warehousing | - | 🟡 |
 | 📘 Supervised Machine Learning | Regression, classification, preprocessing, cross-validation, pipelines | - | ⬜ |
 | 📙 Unsupervised Machine Learning | Clustering (KMeans, DBSCAN), PCA, NLP, topic modeling, mini-projects | - | ⬜ |
 | 🧠 Deep Learning | TensorFlow/Keras, CNNs, image processing, visual classification | - | ⬜ |
