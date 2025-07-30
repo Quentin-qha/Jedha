@@ -1,5 +1,5 @@
 # 🎮 Steam Game Marketplace Analysis
-*Certification Bloc #3 — Data Science Training*
+*Certification Bloc #4 — Data Science Training*
 
 ## 🚀 How to Access the Project
 
@@ -40,7 +40,7 @@ By achieving these goals, the project demonstrates the potential of big data ana
 - **PySpark**: For large-scale data processing and transformation, enabling efficient handling of semi-structured data.
 - **Databricks**: A collaborative data platform that provides an interactive workspace for big data analytics and visualization.
 - **AWS S3**: Storage of the raw, semi-structured JSON dataset used in this project.
-- **Pandas** (optional, for minor data handling): To complement PySpark for lightweight operations where appropriate.
+- **Pandas**: (optional, for minor data handling): To complement PySpark for lightweight operations where appropriate.
 - **Databricks Visualization Tools**: For creating insightful charts and graphs directly within the notebook.
 - **Markdown**: For clear documentation and reporting within the notebook and on GitHub.
 
