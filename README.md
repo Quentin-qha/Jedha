@@ -33,9 +33,9 @@ I update it as I progress.
 | 📊 Exploratory Data Analysis | EDA, Numpy, Pandas, statistics, data visualization with Plotly, mini-projects | [Speed Dating Data Analysis](02_exploratory_data_analysis) | ✅ |
 | 📁 Data Collection & Management | Web scraping, APIs, HTML/CSS, S3 storage, ETL pipelines, SQL, SQLAlchemy | [Weather scrapping - Kayak](03_data_collection_and_managment) | ✅ |
 | 🧠 Big Data | Spark (RDD, DataFrames, SQL), PySpark, Databricks, data warehousing | [Steam Game Marketplace Analysis](04_big_data) | ✅ |
-| 📘 Supervised Machine Learning | Regression, classification, preprocessing, cross-validation, pipelines | - | 🟡 |
-| 📙 Unsupervised Machine Learning | Clustering (KMeans, DBSCAN), PCA, NLP, topic modeling, mini-projects | - | ⬜ |
-| 🧠 Deep Learning | TensorFlow/Keras, CNNs, image processing, visual classification | - | ⬜ |
+| 📘 Supervised Machine Learning | Regression, classification, preprocessing, cross-validation, pipelines | [Conversion Rate Prediction](05_supervised_machine_learning) | ✅ |
+| 📙 Unsupervised Machine Learning | Clustering (KMeans, DBSCAN), PCA, NLP, topic modeling, mini-projects | [Product Description Clustering & Recommendation System](06_unsupervised_machine_learning) | ✅ |
+| 🧠 Deep Learning | TensorFlow/Keras, CNNs, image processing, visual classification | - | 🟡 |
 | 🚀 Deployment | Docker, MLflow, FastAPI, API deployment, Streamlit dashboards | - | ⬜ |
 | 🔡 Large Language Models | Core LLM concepts, embeddings, fine-tuning, AI app demos | - | ⬜ |
 | 🎤 Final Project | Full data project: data collection, modeling, analysis, final presentation | - | ⬜ |
