@@ -35,8 +35,8 @@ I update it as I progress.
 | 🧠 Big Data | Spark (RDD, DataFrames, SQL), PySpark, Databricks, data warehousing | [Steam Game Marketplace Analysis](04_big_data) | ✅ |
 | 📘 Supervised Machine Learning | Regression, classification, preprocessing, cross-validation, pipelines | [Conversion Rate Prediction](05_supervised_machine_learning) | ✅ |
 | 📙 Unsupervised Machine Learning | Clustering (KMeans, DBSCAN), PCA, NLP, topic modeling, mini-projects | [Product Description Clustering & Recommendation System](06_unsupervised_machine_learning) | ✅ |
-| 🧠 Deep Learning | TensorFlow/Keras, CNNs, image processing, visual classification | - | 🟡 |
-| 🚀 Deployment | Docker, MLflow, FastAPI, API deployment, Streamlit dashboards | - | ⬜ |
+| 🧠 Deep Learning | TensorFlow/Keras, CNNs, image processing, visual classification | [Spam detector](07_deep_learning) | ✅ |
+| 🚀 Deployment | Docker, MLflow, FastAPI, API deployment, Streamlit dashboards | - | 🟡 |
 | 🔡 Large Language Models | Core LLM concepts, embeddings, fine-tuning, AI app demos | - | ⬜ |
 | 🎤 Final Project | Full data project: data collection, modeling, analysis, final presentation | - | ⬜ |
 
