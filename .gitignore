@@ -1,3 +1,4 @@
 # Fichiers temporaires d'OS
 .DS_Store
 Thumbs.db
+*.env
