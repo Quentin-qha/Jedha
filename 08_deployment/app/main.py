@@ -25,7 +25,7 @@ def load_data():
                 "type": scope_name
             })
 
-    df = pd.read_excel("data/get_around_delay_analysis.xlsx")
+    df = pd.read_excel("/app/data/get_around_delay_analysis.xlsx")
     data_clean = df[(df["delay_at_checkout_in_minutes"].between(-1440, 1440))].copy()
     data_clean = data_clean[data_clean['state'] == "ended"]
     data_clean = data_clean.drop(columns=['car_id', 'rental_id', 'previous_ended_rental_id'])
