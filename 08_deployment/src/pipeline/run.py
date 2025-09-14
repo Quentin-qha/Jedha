@@ -28,6 +28,21 @@ df['car_type'] = df['car_type'].apply(lambda x: x if car_type_count[x] > 50 else
 df = df[df["mileage"] <= 500_000]
 df = df.drop(columns=["Unnamed: 0", "winter_tires", "paint_color"])
 
+boolean_columns = ["private_parking_available", "has_gps", "has_air_conditioning", "automatic_car", "has_getaround_connect", "has_speed_regulator"]
+
+for column in boolean_columns:
+    df[column] = df[column].map({True: 1, False: 0})
+
+
+feature_target = "rental_price_per_day"
+X = df.loc[:, df.columns != feature_target]
+y = df[feature_target]
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+numeric_features = ["mileage", "engine_power", *boolean_columns]
+categorical_features = ["model_key", "fuel", "car_type"]
+
 # Set your variables for your environment
 EXPERIMENT_NAME="08_deployemet_project"
 
@@ -44,23 +59,9 @@ mlflow.set_experiment(EXPERIMENT_NAME)
 experiment = mlflow.get_experiment_by_name(EXPERIMENT_NAME)
 
 # Call mlflow autolog
-#mlflow.sklearn.autolog()
+mlflow.sklearn.autolog()
 
 with mlflow.start_run(experiment_id = experiment.experiment_id):
-    boolean_columns = ["private_parking_available", "has_gps", "has_air_conditioning", "automatic_car", "has_getaround_connect", "has_speed_regulator"]
-
-    for column in boolean_columns:
-        df[column] = df[column].map({True: 1, False: 0})
-
-    feature_target = "rental_price_per_day"
-    X = df.loc[:, df.columns != feature_target]
-    y = df[feature_target]
-
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-    numeric_features = ["mileage", "engine_power", *boolean_columns]
-    categorical_features = ["model_key", "fuel", "car_type"]
-
     numeric_transformer = Pipeline(
         steps=[
             ('scaler', StandardScaler()) # TESTER VS ROBUST SCALER EN GRID SEARCH VOIR CE QUI IMPACT LE MIEUX
@@ -77,27 +78,7 @@ with mlflow.start_run(experiment_id = experiment.experiment_id):
             ('cat', categorical_transformer, categorical_features)
         ])
 
-    """pipe = Pipeline(steps=[
-        ('preprocessor', preprocessor),
-        ('regressor', CatBoostRegressor(loss_function="RMSE", random_state=42, verbose=0))
-    ])
-
-    # grille d’hyperparamètres
-    param_grid = {
-        'regressor__depth': [5, 6],              # profondeur max des arbres
-        'regressor__learning_rate': [0.07, 0.08, 0.09], # taux d’apprentissage
-        'regressor__n_estimators': [600, 650, 700],  # nombre d’arbres
-        'regressor__l2_leaf_reg': [9, 10, 11]        # régularisation L2
-    }
-
-    # GridSearchCV
-    grid = GridSearchCV(pipe, param_grid, cv=3, scoring="neg_root_mean_squared_error", n_jobs=-1, verbose=2)
-    grid.fit(X, y)
-
-    print("Meilleurs paramètres :", grid.best_params_)
-    print("Meilleur score (RMSE) :", -grid.best_score_)"""
-
-    clean_params = {'depth': 4, 'l2_leaf_reg': 9, 'learning_rate': 0.08, 'n_estimators': 700}
+    clean_params = {'depth': 6, 'l2_leaf_reg': 9, 'learning_rate': 0.08, 'n_estimators': 700}
 
     final_model = CatBoostRegressor(**clean_params, random_state=42)
 
@@ -116,18 +97,21 @@ with mlflow.start_run(experiment_id = experiment.experiment_id):
     mape = mean_absolute_percentage_error(y_test, y_pred)
     print("MAPE :", mape)
 
-    mlflow.sklearn.save_model(
-        sk_model=final_pipeline,
-        path=save_path,
-        input_example=X_train.iloc[0:1]
-    )
-    mlflow.log_metric("rmse", root_mean_squared_error(y_test, y_pred))
-    mlflow.log_metric("mae", mean_absolute_error(y_test, y_pred))
-    mlflow.log_metric("r2", r2_score(y_test, y_pred))
-    mlflow.log_metric("mape", mean_absolute_percentage_error(y_test, y_pred))
-    mlflow.sklearn.log_model(
-        sk_model=final_pipeline,
-        artifact_path="model",
-        registered_model_name="catboost_price_model"
-    )
-    mlflow.log_params(clean_params)
+    #mlflow.sklearn.save_model(
+     #   sk_model=final_pipeline,
+      #  path=save_path,
+      #  input_example=X_train.iloc[0:1]
+    #)
+    #mlflow.log_metric("rmse", root_mean_squared_error(y_test, y_pred))
+    #mlflow.log_metric("mae", mean_absolute_error(y_test, y_pred))
+    #mlflow.log_metric("r2", r2_score(y_test, y_pred))
+    #mlflow.log_metric("mape", mean_absolute_percentage_error(y_test, y_pred))
+    #mlflow.sklearn.log_model(
+    #    sk_model=final_pipeline,
+    #    artifact_path="CatBoostRegressor",
+    #    registered_model_name="catboost_price_model"
+    #)
+    mlflow.set_tag("mlflow.user", "Quentin")
+    mlflow.set_tag("mlflow.note.content", "Pipeline CatBoost v0.1 - training sur dataset pricing")
+    #mlflow.log_params(clean_params)
+    mlflow.end_run()
