@@ -43,28 +43,17 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 numeric_features = ["mileage", "engine_power", *boolean_columns]
 categorical_features = ["model_key", "fuel", "car_type"]
 
-# Set your variables for your environment
 EXPERIMENT_NAME="08_deployemet_project"
 
-# Set tracking URI to your Hugging Face application
-#mlflow.set_tracking_uri(os.environ["APP_URI"])
-#mlflow.set_tracking_uri("https://huggingface.co/spaces/qhaData/ml-flow")
 mlflow.set_tracking_uri("https://qhadata-ml-flow.hf.space")
-
-
-# Set experiment's info 
 mlflow.set_experiment(EXPERIMENT_NAME)
-
-# Get our experiment info
 experiment = mlflow.get_experiment_by_name(EXPERIMENT_NAME)
-
-# Call mlflow autolog
 mlflow.sklearn.autolog()
 
 with mlflow.start_run(experiment_id = experiment.experiment_id):
     numeric_transformer = Pipeline(
         steps=[
-            ('scaler', StandardScaler()) # TESTER VS ROBUST SCALER EN GRID SEARCH VOIR CE QUI IMPACT LE MIEUX
+            ('scaler', StandardScaler())
         ])
 
     categorical_transformer = Pipeline(
@@ -90,28 +79,6 @@ with mlflow.start_run(experiment_id = experiment.experiment_id):
 
     y_pred = final_pipeline.predict(X_test)
 
-    print("RMSE :", root_mean_squared_error(y_test, y_pred))
-    print("MAE :", mean_absolute_error(y_test, y_pred))
-    print("R² :", r2_score(y_test, y_pred))
-
-    mape = mean_absolute_percentage_error(y_test, y_pred)
-    print("MAPE :", mape)
-
-    #mlflow.sklearn.save_model(
-     #   sk_model=final_pipeline,
-      #  path=save_path,
-      #  input_example=X_train.iloc[0:1]
-    #)
-    #mlflow.log_metric("rmse", root_mean_squared_error(y_test, y_pred))
-    #mlflow.log_metric("mae", mean_absolute_error(y_test, y_pred))
-    #mlflow.log_metric("r2", r2_score(y_test, y_pred))
-    #mlflow.log_metric("mape", mean_absolute_percentage_error(y_test, y_pred))
-    #mlflow.sklearn.log_model(
-    #    sk_model=final_pipeline,
-    #    artifact_path="CatBoostRegressor",
-    #    registered_model_name="catboost_price_model"
-    #)
     mlflow.set_tag("mlflow.user", "Quentin")
     mlflow.set_tag("mlflow.note.content", "Pipeline CatBoost v0.1 - training sur dataset pricing")
-    #mlflow.log_params(clean_params)
     mlflow.end_run()

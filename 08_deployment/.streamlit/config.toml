@@ -1,3 +1,16 @@
+[general]
+browser.gatherUsageStats = false
+
+[server]
+headless = true
+port = 7860
+address = "0.0.0.0"
+enableCORS = false
+enableXsrfProtection = false
+
+[cache]
+path = "/tmp/.streamlit-cache"
+
 [theme]
 base="light"
 backgroundColor="#F5F5F5"

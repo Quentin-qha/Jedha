@@ -1,21 +1,15 @@
-# Image Python légère
 FROM python:3.10-slim
 
-# Créer un dossier de travail
 WORKDIR /ml-trainer
 
-# Installer dépendances système utiles
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Copier requirements
 COPY requirements/pipeline.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copier ton code source
 COPY src/ ./src/
 
-# Lancer ton pipeline
 CMD ["python", "src/pipeline/run.py"]
