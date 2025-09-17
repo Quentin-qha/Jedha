@@ -1,0 +1,14 @@
+cat > hf_space/.dockerignore << 'EOF'
+*.env
+data/
+db/
+__pycache__/
+*.ipynb
+*.xlsx
+*.csv
+*.parquet
+*.pt
+*.onnx
+*.pickle
+*.pkl
+EOF

@@ -1,8 +1,0 @@
-boto3
-pandas 
-gunicorn 
-scikit-learn 
-mlflow
-psycopg2-binary
-catboost
-mlflow
