@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/quentinhaentjens/Documents/data%20science/git/datascience/08_deployment/ml_model/mlruns/0/52e77f7750144304beaf9aa46393f0ac/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 52e77f7750144304beaf9aa46393f0ac
+run_name: rebellious-loon-20
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758122099909
+status: 1
+tags: []
+user_id: quentinhaentjens

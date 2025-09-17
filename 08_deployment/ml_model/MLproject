@@ -1,7 +1,7 @@
 name: car_price_prediction_per_day
 
 docker_env:
-  image: qhae/mlflow-custom
+  image: qhae/mlflow-project:latest
   environment:
     - MLFLOW_TRACKING_URI
     - AWS_ACCESS_KEY_ID
@@ -17,7 +17,7 @@ entry_points:
       l2_leaf_reg: {type: int, default: 9}
       learning_rate: {type: float, default: 0.08}
     command: >
-      python src/pipeline/train.py\
+      python src/train.py\
       --n_estimators {n_estimators}\
       --depth {depth}\
       --l2_leaf_reg {l2_leaf_reg}\

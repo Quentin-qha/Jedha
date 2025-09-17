@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/quentinhaentjens/Documents/data%20science/git/datascience/08_deployment/ml_model/mlruns/0/b53fef30ef0b481381e34864ab907f42/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b53fef30ef0b481381e34864ab907f42
+run_name: clean-stag-810
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758126213387
+status: 1
+tags: []
+user_id: quentinhaentjens

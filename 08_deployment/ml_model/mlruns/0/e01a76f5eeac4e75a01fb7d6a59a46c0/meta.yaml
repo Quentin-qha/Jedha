@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/quentinhaentjens/Documents/data%20science/git/datascience/08_deployment/ml_model/mlruns/0/e01a76f5eeac4e75a01fb7d6a59a46c0/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e01a76f5eeac4e75a01fb7d6a59a46c0
+run_name: learned-worm-677
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758122169503
+status: 1
+tags: []
+user_id: quentinhaentjens

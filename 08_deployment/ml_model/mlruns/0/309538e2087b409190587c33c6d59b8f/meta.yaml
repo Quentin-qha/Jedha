@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/quentinhaentjens/Documents/data%20science/git/datascience/08_deployment/ml_model/mlruns/0/309538e2087b409190587c33c6d59b8f/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 309538e2087b409190587c33c6d59b8f
+run_name: stately-cub-450
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758122017057
+status: 1
+tags: []
+user_id: quentinhaentjens

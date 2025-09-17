@@ -20,7 +20,10 @@ if os.path.exists(save_path):
 
 boolean_columns = ["private_parking_available", "has_gps", "has_air_conditioning", "automatic_car", "has_getaround_connect", "has_speed_regulator"]
 
-df = prepare_data("/ml-trainer/data/get_around_pricing_project.csv", boolean_columns)
+base_dir = os.path.dirname(os.path.abspath(__file__))
+data_path = os.path.join(base_dir, "..", "data", "get_around_pricing_project.csv")
+
+df = prepare_data(data_path, boolean_columns)
 
 feature_target = "rental_price_per_day"
 X = df.loc[:, df.columns != feature_target]
