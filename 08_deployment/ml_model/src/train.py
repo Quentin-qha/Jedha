@@ -39,7 +39,7 @@ EXPERIMENT_NAME="08_deployemet_project"
 #mlflow.set_tracking_uri("https://qhadata-ml-flow.hf.space")
 mlflow.set_experiment(EXPERIMENT_NAME)
 experiment = mlflow.get_experiment_by_name(EXPERIMENT_NAME)
-mlflow.sklearn.autolog()
+mlflow.sklearn.autolog(log_models=False)
 
 client = mlflow.tracking.MlflowClient()
 run = client.create_run(experiment.experiment_id)
@@ -78,7 +78,7 @@ with mlflow.start_run(run_id = run.info.run_id) as run:
     mlflow.set_tag("mlflow.note.content", "Pipeline CatBoost v0.1 - training sur dataset pricing")
     mlflow.sklearn.log_model(
         sk_model=final_pipeline,
-        artifact_path="model", #Faut il le concerver et ou l'appeller name ? 
+        name="GetAroundPrice", #Faut il le concerver et ou l'appeller name ? 
         registered_model_name="CatBoostRegressorGetAround"
     )
     #mlflow.sklearn.log_model(final_pipeline, "CatBoostRegressorGetAround")

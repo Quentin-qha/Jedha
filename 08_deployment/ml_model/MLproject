@@ -17,8 +17,8 @@ entry_points:
       l2_leaf_reg: {type: int, default: 9}
       learning_rate: {type: float, default: 0.08}
     command: >
-      python src/train.py\
-      --n_estimators {n_estimators}\
-      --depth {depth}\
-      --l2_leaf_reg {l2_leaf_reg}\
+      python src/train.py \
+      --n_estimators {n_estimators} \
+      --depth {depth} \
+      --l2_leaf_reg {l2_leaf_reg} \
       --learning_rate {learning_rate}
