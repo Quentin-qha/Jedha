@@ -38,4 +38,4 @@ services:
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
       - AWS_DEFAULT_REGION=eu-west-1
-    command: ["python", "src/pipeline/run.py"]
+    command: ["python", "src/pipeline/train.py"]

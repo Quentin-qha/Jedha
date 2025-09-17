@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/quentinhaentjens/Documents/data%20science/git/datascience/08_deployment/src/pipeline/mlruns/0/7ebfd1a58dce40cab2cdf3bb97c70bb4/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7ebfd1a58dce40cab2cdf3bb97c70bb4
+run_name: unequaled-foal-329
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758093727814
+status: 1
+tags: []
+user_id: quentinhaentjens

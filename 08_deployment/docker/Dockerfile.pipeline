@@ -12,4 +12,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY src/ ./src/
 
-CMD ["python", "src/pipeline/run.py"]
+CMD ["python", "src/pipeline/train.py"]
