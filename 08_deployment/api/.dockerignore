@@ -1,0 +1,10 @@
+*.env
+db/
+__pycache__/
+*.ipynb
+*.parquet
+*.pt
+*.onnx
+*.pickle
+*.pkl
+secret.sh

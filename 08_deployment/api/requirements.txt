@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+mlflow
+pandas
+typing
+pydantic
+botocore
+boto3
+catboost
