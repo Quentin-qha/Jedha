@@ -34,7 +34,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 numeric_features = ["mileage", "engine_power", *boolean_columns]
 categorical_features = ["model_key", "fuel", "car_type"]
 
-EXPERIMENT_NAME="08_deployemet_project"
+EXPERIMENT_NAME="08_deployment_project"
 
 mlflow.set_experiment(EXPERIMENT_NAME)
 experiment = mlflow.get_experiment_by_name(EXPERIMENT_NAME)

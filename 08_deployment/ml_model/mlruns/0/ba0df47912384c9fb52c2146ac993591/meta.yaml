@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/quentinhaentjens/Documents/data%20science/git/datascience/08_deployment/ml_model/mlruns/0/ba0df47912384c9fb52c2146ac993591/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ba0df47912384c9fb52c2146ac993591
+run_name: amusing-worm-613
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758353946086
+status: 1
+tags: []
+user_id: quentinhaentjens

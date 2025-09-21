@@ -7,11 +7,11 @@ import plotly.express as px
 def load_data():
     def categorize_delay(x):
         if x > 5:
-            return "retard"
+            return "Late"
         elif x < -5:
-            return "avance"
+            return "Early"
         else:
-            return "À l'heure"
+            return "On time"
         
     def add_scope(df_scope, scope_name):
         n_total = len(df_scope)
@@ -84,41 +84,41 @@ def load_data():
 
 data_clean, delay_counts, data_type_mean, data_buffer, data_impact_late, mean_late_positive, reel_impact_percent, cancel_impact_percent, percent_of_impact_data, revenue_potentially_affected, data_impact_revenu_by_hours = load_data()
 
-st.title("Analyse des retards Getaround")
+st.title("Getaround Delay Analysis")
 st.markdown(
     """
-    Ce tableau de bord met en lumière l’impact des retards de restitution des véhicules sur Getaround.
+    This dashboard highlights the impact of late vehicle returns on Getaround.
 
-    **Il illustre à la fois :**
-    - la fréquence et la gravité des retards,
-    - les conséquences sur les conflits entre locations successives,
-    - et la perte potentielle de revenus pour les propriétaires.
+    **It illustrates:**
+    - the frequency and severity of delays,  
+    - the consequences on conflicts between successive rentals,  
+    - and the potential revenue loss for car owners.  
 
-    **Objectif** : aider à définir la meilleure politique de buffer pour réduire les conflits sans sacrifier trop de revenu.
+    **Goal**: help define the best buffer policy to reduce conflicts without sacrificing too much revenue.
     """
 )
 
 # Histogram 
 with st.container():
-    st.markdown("#### Distribution des restitutions des voitures")
-    st.caption("La majorité des retards se concentrent autour de 0 → une grande partie rend à l’heure ou avec un léger retard. Quelques cas extrêmes allongent la distribution.")
+    st.markdown("#### Distribution of Car Returns")
+    st.caption("Most delays are concentrated around 0 → a large share of users return on time or with a slight delay. A few extreme cases extend the distribution.")
     fig_hist_delay = px.histogram(
         data_clean,
         x="delay_at_checkout_in_hours",
-        labels={"delay_at_checkout_in_hours": "Retard au check-out (minutes)"}
+        labels={"delay_at_checkout_in_hours": "Delay at Check-out (minutes)"}
     )
 
     fig_hist_delay.add_vline(
         x=0,
         line_dash="dash",
         line_color="red",
-        annotation_text="À l'heure",
+        annotation_text="On time",
         annotation_position="top left"
     )
 
     fig_hist_delay.update_layout(
-        xaxis_title="Délai au retour (heures)",
-        yaxis_title="Nombre de locations",
+        xaxis_title="Return Delay (hours)",
+        yaxis_title="Number of Rentals",
         bargap=0.05
     )
 
@@ -130,8 +130,8 @@ st.divider()
 # Pie charte delay
 col1, spacer, col2 = st.columns([4.75,0.5,4.75])
 with col1.container():
-    st.markdown("#### Proportion d’utilisateurs ponctuels, en retard ou en avance")
-    st.caption("Une part importante des locations est rendue à l’heure, mais près de X% présentent un retard significatif.")
+    st.markdown("#### Proportion of Users On Time, Late, or Early")
+    st.caption("A large share of rentals are returned on time, but nearly X% show a significant delay.")
     fig_delay_pie = px.pie(
         delay_counts,
         names="category",
@@ -142,8 +142,8 @@ with spacer:
     st.markdown("")
 # Count par type de checkin
 with col2.container():
-    st.markdown("#### Impact du mode de check-in sur les retards")
-    st.caption("Les utilisateurs “mobile” semblent accumuler plus de retard que les utilisateurs “connect”, ce qui peut refléter une différence d’usage.")
+    st.markdown("#### Impact of Check-in Method on Delays")
+    st.caption("“Mobile” users tend to accumulate more delays than “Connect” users, which may reflect a difference in usage.")
     fig_type_mean = px.bar(
         data_type_mean,
         x="checkin_type",
@@ -153,8 +153,8 @@ with col2.container():
 
 st.divider()
 with st.container():
-    st.markdown("#### Quel buffer réduit efficacement le risque de conflit ?")
-    st.caption("Plus le buffer est long, plus la probabilité de conflit diminue. Mais cela se fait au détriment du revenu.")
+    st.markdown("#### Which Buffer Effectively Reduces the Risk of Conflict?")
+    st.caption("The longer the buffer, the lower the probability of conflict. However, this comes at the expense of revenue.")
     fig_buffer = px.line(
         data_buffer,
         x="buffer_hours",
@@ -165,17 +165,17 @@ with st.container():
         x=0,
         line_dash="dash",
         line_color="red",
-        annotation_text="À l'heure",
+        annotation_text="On time",
         annotation_position="top left"
     )
     st.plotly_chart(fig_buffer, use_container_width=True)
 st.divider()
 # Buffer slider 
 with st.container():
-    st.markdown("#### Quel est l’effet du buffer selon le type de check-in ?")
-    st.caption("Le buffer réduit le risque de conflit, mais l’impact varie entre “mobile” et “connect”.")
+    st.markdown("#### What Is the Effect of the Buffer Depending on the Check-in Type?")
+    st.caption("The buffer reduces the risk of conflict, but the impact differs between “Mobile” and “Connect”.")
     buffer_h = st.slider(
-            "Délais du buffer (heures)",
+            "Buffer Time (hours)",
             min_value=int(data_buffer["buffer_hours"].min()),
             max_value=int(data_buffer["buffer_hours"].max()),
             value=0
@@ -193,12 +193,13 @@ with st.container():
     
     left, center, right = st.columns(3)
     with left:
-        st.markdown("##### Tous")
+        st.markdown("##### All")
 
         container, separator = st.columns([9.5,0.5])
         with container:
-            st.metric("% Conflit", f"{row_all['conflict_percent']:.2f}%")
-            st.metric("Nombre de locations impactées", f"{round(row_all['nbr_location_affect'])}")
+            st.metric("% Conflict", f"{row_all['conflict_percent']:.2f}%")
+            st.metric("Number of Rentals Affected", f"{round(row_all['nbr_location_affect'])}")
+
         with separator:
             st.markdown("""
                 <style>
@@ -216,8 +217,8 @@ with st.container():
 
         container, separator = st.columns([9.5,0.5])
         with container:
-            st.metric("% Conflit", f"{row_mobile['conflict_percent']:.2f}%")
-            st.metric("Nombre de locations impactées", f"{round(row_mobile['nbr_location_affect'])}")
+            st.metric("% Conflict", f"{row_mobile['conflict_percent']:.2f}%")
+            st.metric("Number of Rentals Affected", f"{round(row_mobile['nbr_location_affect'])}")
         with separator:
             st.markdown("""
                 <style>
@@ -232,14 +233,15 @@ with st.container():
 
     with right:
         st.markdown("##### Connect")
-        st.metric("% Conflit", f"{row_connect['conflict_percent']:.2f}%")
-        st.metric("Nombre de locations impactées", f"{round(row_connect['nbr_location_affect'])}")
+        st.metric("% Conflict", f"{row_connect['conflict_percent']:.2f}%")
+        st.metric("Number of Rentals Affected", f"{round(row_connect['nbr_location_affect'])}")
 
 st.divider()
+
 # Buffer vs revenue
 with st.container():
-    st.markdown("#### Quel est le coût en revenu d’un buffer trop long ?")
-    st.caption("Chaque heure ajoutée au buffer réduit les risques de conflit mais diminue aussi la part de revenu exploitable.")
+    st.markdown("#### What Is the Revenue Cost of an Overly Long Buffer?")
+    st.caption("Each additional hour added to the buffer reduces the risk of conflict but also decreases the share of exploitable revenue.")
     spacer_left, left, right, space_right = st.columns([2, 1.5, 3, 2])
     with spacer_left:
         st.markdown("")
@@ -275,12 +277,9 @@ with st.container():
                 </style>
                 <div class="padding-revenue_right"></div>
                 """, unsafe_allow_html=True)
-        st.markdown("Le nombre total de revenu qui pourraient être affectés")
+        st.markdown("The total amount of revenue that could be affected")
     with space_right:
         st.markdown("")
-    #st.divider()
-
-    #st.caption("Dans ce graphique vous pourrez voir le potentiel de location perdue (et donc leur revenus) sur la totalité des locations")
 
     fig_revene_potentialy_impact = px.line(
         data_impact_revenu_by_hours, 
@@ -289,8 +288,8 @@ with st.container():
         text="revert_percentage"
     )
     fig_revene_potentialy_impact.update_layout(
-        xaxis_title="Heures",
-        yaxis_title="Pourcentage potentiel d'impact sur le revenu",
+        xaxis_title="Hours",
+        yaxis_title="Potential Percentage of Revenue Impact",
         bargap=0.05
     )
     fig_revene_potentialy_impact.update_traces(
@@ -301,13 +300,13 @@ with st.container():
 st.divider()
 #with st.container(border=True):
 with st.container():
-    st.markdown("#### Que se passe-t-il quand un conflit survient ?")
-    st.caption(f"Seules {percent_of_impact_data}% des locations du dataset contiennent un enchaînement de réservations (une location suivie immédiatement d’une autre). Les indicateurs présentés ci-dessous s’appuient uniquement sur ce sous-ensemble, car ce sont les seuls cas où un conflit réel peut être observé et mesuré.")
+    st.markdown("#### What Happens When a Conflict Occurs?")
+    st.caption(f"Only {percent_of_impact_data}% of the rentals in the dataset contain a back-to-back booking (one rental immediately followed by another). The indicators shown below are based only on this subset, since these are the only cases where a real conflict can be observed and measured.")
     left, center, right = st.columns(3)
     with left:
         container, separator = st.columns([9.5,0.5])
         with container:
-            st.markdown("Proportion de locations affectées par un retard")
+            st.markdown("Proportion of Rentals Affected by a Delay")
             st.markdown(f"### {reel_impact_percent}%")
 
         with separator:
@@ -324,7 +323,7 @@ with st.container():
     with center:
         container, separator = st.columns([9.5,0.5])
         with container:
-            st.markdown("Part des annulations directement dues à un retard")
+            st.markdown("Share of Cancellations Directly Caused by a Delay")
             st.markdown(f"### {cancel_impact_percent}%")
 
         with separator:
@@ -332,7 +331,7 @@ with st.container():
                 <div class="separator-late"></div>
                 """, unsafe_allow_html=True)
     with right:
-        st.markdown("Durée moyenne de l’attente en cas de conflit")
+        st.markdown("Average Waiting Time in Case of Conflict")
         st.markdown(f"### {mean_late_positive}")
 
     fig_impact_late = px.histogram(
@@ -341,19 +340,19 @@ with st.container():
         nbins=100,
     )
     fig_impact_late.update_layout(
-        xaxis_title="Durée du retard causant un conflit (heures)",
-        yaxis_title="Nombre de locations concernées"
+        xaxis_title="Delay Duration Causing a Conflict (hours)",
+        yaxis_title="Number of Affected Rentals",
     )
     st.plotly_chart(fig_impact_late, use_container_width=True)
 
 st.markdown(
     """
-    #### Conclusion :
-    L’analyse montre que les retards impactent environ 8,6% du revenu potentiel.
+    #### Conclusion:
+    The analysis shows that delays impact around 8.6% of potential revenue.  
 
-    - L’instauration d’un buffer réduit significativement les conflits entre locations successives.
-    - En contrepartie, chaque heure de buffer représente une perte progressive de revenu potentiel (jusqu’à 8,6%).
+    - Introducing a buffer significantly reduces conflicts between successive rentals.  
+    - On the other hand, each additional buffer hour leads to a progressive loss of potential revenue (up to 8.6%).  
 
-    Ce dashboard permet d’explorer différents scénarios afin d’identifier le meilleur compromis entre réduction des conflits et préservation du revenu.
+    This dashboard allows exploring different scenarios to identify the best trade-off between conflict reduction and revenue preservation.
     """
 )
