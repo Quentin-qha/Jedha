@@ -36,9 +36,9 @@ I update it as I progress.
 | 📘 Supervised Machine Learning | Regression, classification, preprocessing, cross-validation, pipelines | [Conversion Rate Prediction](05_supervised_machine_learning) | ✅ |
 | 📙 Unsupervised Machine Learning | Clustering (KMeans, DBSCAN), PCA, NLP, topic modeling, mini-projects | [Product Description Clustering & Recommendation System](06_unsupervised_machine_learning) | ✅ |
 | 🧠 Deep Learning | TensorFlow/Keras, CNNs, image processing, visual classification | [Spam detector](07_deep_learning) | ✅ |
-| 🚀 Deployment | Docker, MLflow, FastAPI, API deployment, Streamlit dashboards | - | 🟡 |
-| 🔡 Large Language Models | Core LLM concepts, embeddings, fine-tuning, AI app demos | - | ⬜ |
-| 🎤 Final Project | Full data project: data collection, modeling, analysis, final presentation | - | ⬜ |
+| 🚀 Deployment | Docker, MLflow, FastAPI, API deployment, Streamlit dashboards | [GetAround Pricing Optimization](08_deployment) | ✅ |
+| 🔡 Large Language Models | Core LLM concepts, embeddings, fine-tuning, AI app demos | - | 🟡 |
+| 🎤 Final Project | Full data project: data collection, modeling, analysis, final presentation | - | 🟡 |
 
 
 ## 📫 Contact
