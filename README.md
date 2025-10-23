@@ -29,7 +29,7 @@ I update it as I progress.
 
 | Module | Description | Final Project | Status |
 |--------|-------------|---------------|--------|
-| 🐍 Python Programming | Core Python, loops, functions, OOP, best practices, Git & GitHub | [Buil a quizz](01_python_programming) | ✅ |
+| 🐍 Python Programming | Core Python, loops, functions, OOP, best practices, Git & GitHub | [Buil a quiz](01_python_programming) | ✅ |
 | 📊 Exploratory Data Analysis | EDA, Numpy, Pandas, statistics, data visualization with Plotly, mini-projects | [Speed Dating Data Analysis](02_exploratory_data_analysis) | ✅ |
 | 📁 Data Collection & Management | Web scraping, APIs, HTML/CSS, S3 storage, ETL pipelines, SQL, SQLAlchemy | [Weather scrapping - Kayak](03_data_collection_and_managment) | ✅ |
 | 🧠 Big Data | Spark (RDD, DataFrames, SQL), PySpark, Databricks, data warehousing | [Steam Game Marketplace Analysis](04_big_data) | ✅ |
