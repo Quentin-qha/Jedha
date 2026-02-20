@@ -131,7 +131,7 @@ st.divider()
 col1, spacer, col2 = st.columns([4.75,0.5,4.75])
 with col1.container():
     st.markdown("#### Proportion of Users On Time, Late, or Early")
-    st.caption("A large share of rentals are returned on time, but nearly X% show a significant delay.")
+    st.caption("A large share of rentals are returned on time, but nearly 52.8% show a significant delay.")
     fig_delay_pie = px.pie(
         delay_counts,
         names="category",

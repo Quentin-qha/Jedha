@@ -1,0 +1,13 @@
+[('preprocessor', ColumnTransformer(transformers=[('num',
+                                 Pipeline(steps=[('scaler', StandardScaler())]),
+                                 ['mileage', 'engine_power',
+                                  'private_parking_available', 'has_gps',
+                                  'has_air_conditioning', 'automatic_car',
+                                  'has_getaround_connect',
+                                  'has_speed_regulator']),
+                                ('cat',
+                                 Pipeline(steps=[('encoder',
+                                                  OneHotEncoder(drop='first',
+                                                                handle_unknown='infrequent_if_exist',
+                                                                min_frequency=30))]),
+                                 ['model_key', 'fuel', 'car_type'])])), ('regressor', <catboost.core.CatBoostRegressor object at 0x17ef09b50>)]

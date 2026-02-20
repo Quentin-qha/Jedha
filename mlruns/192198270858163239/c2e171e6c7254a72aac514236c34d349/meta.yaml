@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/quentinhaentjens/Documents/data%20science/git/datascience/mlruns/192198270858163239/c2e171e6c7254a72aac514236c34d349/artifacts
+end_time: 1771592421340
+entry_point_name: ''
+experiment_id: '192198270858163239'
+lifecycle_stage: active
+run_id: c2e171e6c7254a72aac514236c34d349
+run_name: spiffy-koi-23
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771592410009
+status: 3
+tags: []
+user_id: unknown

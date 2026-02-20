@@ -136,7 +136,7 @@ git clone https://github.com/Quentin-qha/Jedha.git
 ### 2. Start streamlit
 ```bash
 cd 08_deployment/streamlit_app
-docker build -t streamlit-getaround
+docker build -t streamlit-getaround .
 docker run -p 7860:7860 streamlit-getaround
 ```
 

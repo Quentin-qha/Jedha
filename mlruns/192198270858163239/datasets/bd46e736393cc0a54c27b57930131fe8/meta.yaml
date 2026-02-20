@@ -1,0 +1,15 @@
+digest: c0f48692
+name: dataset
+profile: '{"num_rows": 3873, "num_elements": 42603}'
+schema: '{"mlflow_colspec": [{"type": "string", "name": "model_key", "required": true},
+  {"type": "long", "name": "mileage", "required": true}, {"type": "long", "name":
+  "engine_power", "required": true}, {"type": "string", "name": "fuel", "required":
+  true}, {"type": "string", "name": "car_type", "required": true}, {"type": "long",
+  "name": "private_parking_available", "required": true}, {"type": "long", "name":
+  "has_gps", "required": true}, {"type": "long", "name": "has_air_conditioning", "required":
+  true}, {"type": "long", "name": "automatic_car", "required": true}, {"type": "long",
+  "name": "has_getaround_connect", "required": true}, {"type": "long", "name": "has_speed_regulator",
+  "required": true}]}'
+source: '{"tags": {"mlflow.user": "quentinhaentjens", "mlflow.source.name": "08_deployment/ml_model/src/train.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "b03f9e150b8e5c4ce8d064bab375b4dac8905c3a"}}'
+source_type: code

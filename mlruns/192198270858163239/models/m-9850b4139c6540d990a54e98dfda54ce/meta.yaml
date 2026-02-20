@@ -1,0 +1,10 @@
+artifact_location: file:///Users/quentinhaentjens/Documents/data%20science/git/datascience/mlruns/192198270858163239/models/m-9850b4139c6540d990a54e98dfda54ce/artifacts
+creation_timestamp: 1771592411652
+experiment_id: '192198270858163239'
+last_updated_timestamp: 1771592421248
+model_id: m-9850b4139c6540d990a54e98dfda54ce
+model_type: null
+name: GetAroundPrice
+source_run_id: c2e171e6c7254a72aac514236c34d349
+status: 2
+status_message: null
